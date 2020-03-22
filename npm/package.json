@@ -1,0 +1,26 @@
+{
+  "name": "watch-mac",
+  "version": "1.0.1",
+  "description": "Watch for file (folder) changes [C++ For MAC]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntfstool/watch-mac.git"
+  },
+  "keywords": [
+    "watch-mac",
+    "monitor",
+    "files",
+    "fs",
+    "event"
+  ],
+  "author": "ntfstool.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntfstool/watch-mac/issues"
+  },
+  "homepage": "https://github.com/ntfstool/watch-mac#readme"
+}

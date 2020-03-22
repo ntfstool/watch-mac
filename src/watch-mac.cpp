@@ -64,8 +64,10 @@ void NtfsToolCallback(
 	}
 }
 int main(int argc,char **argv) {
+    setbuf(stdout, NULL);
+    
     if(!argv[1] || strcmp(argv[1],"help") == 0){
-       printf("Usage:\twatchs path\nResult:\tCreteFileEvent\tpath\n\tMoveFileEvent\tpath\n\tMoveFileEvent\tfromPath\ttoPath\n\tMoveFileInEvent\tpath\n\tMoveFileOutEvent\tpath\n\tDeleteFileEvent\tpath\n\tModifyFileEvent\tpath\n");
+       printf("Usage:\twatch-mac path\nResult:\tCreteFileEvent\tpath\n\tMoveFileEvent\tpath\n\tMoveFileEvent\tfromPath\ttoPath\n\tMoveFileInEvent\tpath\n\tMoveFileOutEvent\tpath\n\tDeleteFileEvent\tpath\n\tModifyFileEvent\tpath\n");
        printf("Watch for file (folder) changes [For MAC]\nCopyright ©2020 ntfstool.com\n");
        return 0;
     }
@@ -93,7 +95,6 @@ int main(int argc,char **argv) {
 	);
 	FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
 	FSEventStreamStart(stream);
-	printf("Watch Files Tools for Mac\nCopyright ©2020 ntfstool.com\n");
 	CFRunLoopRun();
 	FSEventStreamInvalidate(stream);
 	FSEventStreamRelease(stream);

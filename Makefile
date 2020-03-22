@@ -5,10 +5,11 @@ CC=g++
 CFLAGS=-I include
 LDFLAGS=-framework CoreServices
 
-main: watchs.o clean_bin
-	$(CC) $(CFLAGS) $< -o $(OUT_PATH)/watchs $(LDFLAGS)
+main: watch-mac.o clean_bin
+	$(CC) $(CFLAGS) $< -o $(OUT_PATH)/watch-mac  $(LDFLAGS)
+	cp $(OUT_PATH)/watch-mac  $(OUT_PATH)/../npm/bin/watch-mac
 
-main.o: watchs.cpp
+main.o: watch-mac.cpp
 	$(CC) $(CFLAGS) -c $<
 
 clean_bin:
